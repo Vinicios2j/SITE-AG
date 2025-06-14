@@ -1,0 +1,348 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #004aad;
+  padding: 15px 60px;
+  display: flex;
+  justify-content: center;
+  z-index: 10;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+.header .container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  /* retirei justify-content: space-between para usar margin-left auto */
+}
+
+.logo {
+  font-weight: 900;
+  font-size: 1.8rem;
+  color: white;
+  cursor: default;
+}
+
+.logo span {
+  font-weight: 400;
+  font-size: 1.1rem;
+  margin-left: 5px;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin-left: 20px; /* dá um espaço entre logo e menu */
+}
+
+.nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav ul li a:hover {
+  color: #ffd600; /* amarelo vivo para o hover do menu */
+}
+
+.btn-contato {
+  margin-left: auto;
+  background-color: #004aad; /* azul */
+  color: white;
+  padding: 8px 18px;
+  border-radius: 4px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-contato:hover {
+  background-color: #002f6c; /* azul mais escuro */
+  color: #ffd600; /* amarelo no texto ao passar o mouse */
+}
+
+/* responsivo */
+@media (max-width: 768px) {
+  .header {
+    padding: 10px 30px;
+  }
+
+  .nav ul {
+    gap: 15px;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .btn-contato {
+    padding: 6px 14px;
+    font-size: 0.9rem;
+  }
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff;
+}
+
+.hero {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-text {
+  flex: 1;
+  padding: 80px 60px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 2;
+  position: relative;
+}
+
+.titulo {
+  font-size: 5rem;
+  font-weight: 900;
+  color: #004aad;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.titulo .linha1 {
+  display: block;
+}
+
+.titulo .linha2 {
+  display: block;
+  margin-top: -10px;
+}
+
+.descricao {
+  margin-top: 30px;
+  font-size: 1.4rem;
+  color: #222;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+.scroll-msg {
+  margin-top: 50px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #004aad;
+  animation: fade 2s infinite;
+  cursor: pointer;
+}
+
+@keyframes fade {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+.hero-image {
+  flex: 1;
+  position: relative;
+  background-image: url('https://cdn.discordapp.com/attachments/1371209941951451210/1382156089327489175/Design_sem_nome_1.png?ex=684a20aa&is=6848cf2a&hm=4963fab812f0d945ee2e7f8220d0b922a2428745e0c2a919015ed8ea6698b19e&');
+  background-size: cover;
+  background-position: center;
+  clip-path: polygon(
+    5% 0%,     /* topo esquerdo mais perto da borda */
+    100% 0%,  
+    100% 100%,
+    3% 100%    /* base esquerda um pouco para dentro */
+  );
+}
+
+@media (max-width: 992px) {
+  .hero {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .hero-image {
+    clip-path: none;
+    height: 300px;
+  }
+
+  .hero-text {
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .titulo {
+    font-size: 3.5rem;
+  }
+
+  .descricao, .scroll-msg {
+    text-align: center;
+  }
+}
+
+
+/*Serviços*/
+
+.servicos {
+  padding: 100px 20px;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+.container-servicos {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.titulo-secao {
+  font-size: 2.8rem;
+  color: #004aad;
+  margin-bottom: 50px;
+  font-weight: 800;
+}
+
+.lista-servicos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.servico {
+  background-color: white;
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 330px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s;
+  cursor: pointer;
+  position: relative;
+}
+
+.servico:hover {
+  transform: translateY(-8px);
+  background-color: #e6f0ff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.icone-servico {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 20px;
+  transition: transform 0.3s ease;
+}
+
+.icone-servico img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.servico:hover .icone-servico {
+  transform: scale(1.2);
+}
+
+.servico h3 {
+  font-size: 1.4rem;
+  color: #004aad;
+  margin-bottom: 15px;
+}
+
+.servico p {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.5;
+  min-height: 70px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .lista-servicos {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .servico {
+    max-width: 100%;
+  }
+}
+
+
+/*Projetos*/
+.projetos {
+  padding: 80px 20px;
+  background-color: #f0f4ff;
+  text-align: center;
+}
+
+.container-projetos {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.projeto {
+  background: white;
+  padding: 25px 20px;
+  margin-bottom: 25px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: left;
+}
+
+.projeto:hover {
+  background-color: #e1e9ff;
+}
+
+.projeto-titulo {
+  color: #004aad;
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+
+.projeto p {
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.projeto-detalhes {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.projeto.ativo .projeto-detalhes {
+  max-height: 500px; /* Ajuste conforme a quantidade de imagens */
+  margin-top: 15px;
+}
+
+.imagens-projeto {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.imagens-projeto img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.15);
+}
+
