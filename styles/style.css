@@ -553,3 +553,31 @@ body {
 #logozap {
   width: 50px;
 }
+
+/*Responsivo Celular Projetos*/
+
+@media (max-width: 768px) {
+  .img-projetos,
+  .container-img {
+    width: 100%;
+    height: auto;
+  }
+
+  .container-img img,
+  .img-projetos img {
+    height: auto;
+  }
+
+  #anterior,
+  #proximo {
+    font-size: 1.5rem;
+    padding: 8px;
+  }
+
+  .nome-projeto {
+    font-size: 1rem;
+    padding: 8px;
+    bottom: 5px;
+    left: 5px;
+  }
+}
