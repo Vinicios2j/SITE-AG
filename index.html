@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AG Álvaro Genuíno</title>
+  <title>AG Alvaro Genuíno</title>
   <link rel="stylesheet" href="styles/style.css">
+  <link rel="shortcut icon" href="imgs/favicon.png" type="image/x-icon" id="iconFavicon">
 </head>
 <body>
 
@@ -15,22 +16,20 @@
     </div>
     <nav class="nav">
       <ul>
+        <li><a href="#home">Home</a></li>
         <li><a href="#servicos">Serviços</a></li>
         <li><a href="#projetos">Projetos</a></li>
-        <li><a href="#contato">Contato</a></li>
       </ul>
-      <button class="login-button">☃️Login</button>
-    
   </header>
 
-  <section class="hero">
+  <section class="hero" id="home">
     <div class="hero-text">
       <h1 class="titulo">
         <span class="linha1">ALVARO</span>
         <span class="linha2">GENUÍNO</span>
       </h1>
       <p class="descricao">
-        Referência em serviços elétricos residenciais e comerciais. Atuamos com agilidade, segurança e excelência — 24 horas por dia, com profissionais altamente capacitados.
+        Referência em serviços elétricos residenciais e industriais. Atuamos com agilidade, segurança e excelência — 24 horas por dia, com profissionais altamente capacitados.
       </p>
       <p class="scroll-msg">⬇ Role para baixo para saber mais ⬇</p>
     </div>
@@ -66,13 +65,7 @@
         <p>Atendimento ágil em qualquer horário para situações de risco.</p>
       </div>
 
-      <div class="servico">
-        <div class="icone-servico">
-          <img src="https://cdn-icons-png.flaticon.com/512/1436/1436795.png" alt="Automação Residencial">
-        </div>
-        <h3>Automação Residencial</h3>
-        <p>Modernize sua casa com sistemas inteligentes e práticos.</p>
-      </div>
+
 
       <div class="servico">
         <div class="icone-servico">
@@ -86,8 +79,8 @@
         <div class="icone-servico">
           <img src="https://dimensioneng.com.br/assets/images/icone-documento.png" alt="Laudos Técnicos">
         </div>
-        <h3>Laudos e Vistorias</h3>
-        <p>Laudos técnicos para seguro, aluguel ou aprovação de projetos.</p>
+        <h3>Relatórios Técnicos e Avaliações de Risco</h3>
+        <p>Análises de risco e relatórios técnicos para aprovação e segurança.</p>
       </div>
 
     </div>
@@ -95,31 +88,17 @@
 </section>
 
 <section id="projetos" class="projetos">
-  <div class="container-projetos">
-    <h2 class="titulo-secao">Projetos Realizados</h2>
+  <h1>Nossos Projetos</h1>
+  <div class="img-projetos">
+    <div class="container-img">
+  <img id="imagem-projeto" src="imgs/residencial/residencial.png" alt="Projeto">
+  <div class="nome-projeto">Projeto Residencial</div>
+</div>
 
-    <div class="projeto" onclick="toggleProjeto(this)">
-      <h3 class="projeto-titulo">Projeto Residencial</h3>
-      <p>Instalação elétrica em casa com automação.</p>
-      <div class="projeto-detalhes">
-        <div class="imagens-projeto">
-          <img src="imgs/residencial/residencial.png" alt="Projeto residencial 1">
-          <img src="imgs/residencial/residencial1.png" alt="Projeto residencial 3">
-        </div>
-      </div>
-    </div>
-
-    <div class="projeto" onclick="toggleProjeto(this)">
-      <h3 class="projeto-titulo">Projeto Industrial</h3>
-      <p>Montagem de quadro de distribuição para comércio.</p>
-      <div class="projeto-detalhes">
-        <div class="imagens-projeto">
-          <img src="imgs/industrial/industrial.png" alt="Projeto comercial 1">
-          <img src="imgs/industrial/industrial1.png" alt="Projeto comercial 2">
-        </div>
-      </div>
-    </div>
-
+    
+    <!-- Botões de navegação -->
+    <button id="anterior">◀</button>
+    <button id="proximo">▶</button>
   </div>
 </section>
 
@@ -144,15 +123,7 @@
       <h3>Contato</h3>
       <p>📞 (11) 94739-1564</p>
       <p>✉️ contato@alvarogenuino.com</p>
-    </div>
-
-    <div class="footer-social">
-      <h3>Redes Sociais</h3>
-      <div class="social-icons">
-        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"></a>
-        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram"></a>
-        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="WhatsApp"></a>
-      </div>
+      <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram" style="width: 16px;"></a> <span id="userInsta">alvaro_genuino</span>
     </div>
 
   </div>
